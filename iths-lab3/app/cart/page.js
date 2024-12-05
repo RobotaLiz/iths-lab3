@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCart } from "../context/CartProvider";
 import styles from "./page.module.css";
 import ToProducts from "../components/ToProducts";
+import CartProduct from "../components/CartProduct";
 
 export default function CartPage() {
   const { addToCart,cartItems, removeFromCart, deleteFromCart, totalCost } = useCart();
@@ -20,23 +21,7 @@ export default function CartPage() {
         <>
           <ul className={styles.cartList}>
             {cartItems.map((item, index) => (
-              <li key={index} className={styles.cartItem}>
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className={styles.image}
-                />
-                <div>
-                <h3>{item.title}</h3>
-                <p>{item.price} USD</p>
-                <p>Antal: {item.quantity}</p>
-                <button onClick={() => addToCart(item)}>+</button>
-                <button onClick={() => removeFromCart(item.id)}>-</button>
-
-                <button onClick={() => deleteFromCart(item.id)}>X</button>
-
-              </div>
-              </li>
+              <CartProduct key={index} item={item} index={index}/>
             ))}
           </ul>
           <Link href="/checkout">
