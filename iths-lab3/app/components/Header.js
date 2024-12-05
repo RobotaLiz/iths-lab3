@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useCart } from '../context/CartProvider';
 import styles from './Header.module.css';
+import MiniCart from './MiniCart';
 
 export default function Header() {
   const { cartItemCount } = useCart();
@@ -12,9 +13,7 @@ export default function Header() {
       <h1 className={styles.title}>
         <Link href="/">Webbshop</Link>
       </h1>
-      <div className={styles.cart}>
-        <Link href="/cart">Kundkorg: {cartItemCount} saker</Link>
-      </div>
+      <MiniCart/>
     </header>
   );
 }

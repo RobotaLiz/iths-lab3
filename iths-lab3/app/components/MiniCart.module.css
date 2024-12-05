@@ -1,0 +1,33 @@
+  .cart {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .link:hover {
+    color: #007bff;
+  }
+  
+  .cartImage {
+    display: block;
+  }
+  
+  .cartCount {
+    font-size: 0.9rem;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-weight: bold;
+    line-height: 1;
+  }
+  
