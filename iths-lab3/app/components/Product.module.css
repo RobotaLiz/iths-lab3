@@ -25,14 +25,14 @@
 
 .card h3 {
   font-size: 1.2rem;
-  color: #333;
+  color: whitesmoke;
   margin: 10px 0;
   flex-grow: 1;
 }
 
 .card p {
   font-size: 1rem;
-  color: #666;
+  color: whitesmoke;
 }
 
 

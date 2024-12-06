@@ -1,8 +1,7 @@
-import { useCart } from '../context/CartProvider';
+import { useCart } from "../context/CartProvider";
 import styles from "./CartProduct.module.css";
 
 export default function CartProduct({ item }) {
-
   const { addToCart, removeFromCart, deleteFromCart } = useCart();
 
   return (
@@ -12,10 +11,13 @@ export default function CartProduct({ item }) {
         <h3>{item.title}</h3>
         <p>{item.price} USD</p>
         <p>Antal: {item.quantity}</p>
-        <button onClick={() => addToCart(item)}>+</button>
-        <button onClick={() => removeFromCart(item.id)}>-</button>
-
-        <button onClick={() => deleteFromCart(item.id)}>X</button>
+        <div className={styles.actions}>
+          <button onClick={() => addToCart(item)}>+</button>
+          <button onClick={() => removeFromCart(item.id)}>-</button>
+          <button className={`${styles.delete}`} onClick={() => deleteFromCart(item.id)}>
+            X
+          </button>
+        </div>
       </div>
     </li>
   );
