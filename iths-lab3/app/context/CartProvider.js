@@ -48,9 +48,13 @@ export const CartProvider = ({ children }) => {
 
   const budgetProgress = Math.min((totalCost / budget) * 100, 100);
 
+  const clearCart = ()=>{
+    setCartItems([]);
+  }
+
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, deleteFromCart, totalCost, cartItemCount, budget, setBudget, budgetProgress }}
+      value={{ clearCart, cartItems, addToCart, removeFromCart, deleteFromCart, totalCost, cartItemCount, budget, setBudget, budgetProgress }}
     >
       {children}
     </CartContext.Provider>

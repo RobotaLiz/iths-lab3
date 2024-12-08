@@ -24,7 +24,7 @@ export default function CartPage() {
               <CartProduct key={index} item={item} index={index}/>
             ))}
           </ul>
-          <Link href="/checkout">
+          <Link href="/checkout" className={styles.link}>
             Fortsätt till utcheckning {totalCost} USD
           </Link>
           <br/>

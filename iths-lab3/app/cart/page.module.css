@@ -9,4 +9,20 @@
     padding: 0;
   }
 
+  .link {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #098400;
+    border-radius: 5px;
+    background-color: #098400;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
   
+  .link:hover {
+    background-color: #00e317;
+    color: #e2e6ea;
+  }
